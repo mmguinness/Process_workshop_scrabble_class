@@ -18,6 +18,11 @@ describe Scrabble do
       expect(scrabble.score).to eq 6
     end
 
+    it 'accepts a word in lower case letters and returns the total value' do
+      scrabble = Scrabble.new("quirky")
+      expect(scrabble.score).to eq 22
+    end
+
     it 'accepts a word in capital letters and returns the total value' do
       scrabble = Scrabble.new("OXYPHENBUTAZONE")
       expect(scrabble.score).to eq 41
